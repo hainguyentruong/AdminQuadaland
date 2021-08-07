@@ -32,11 +32,11 @@ function SideBar(props) {
                 <li><Link to="/propertysalemethods"> <i class="fa fa-bars" aria-hidden="true" />Sale Method</Link></li>
                 <li> <Link to="/change-password"> <i class="fa fa-cog" aria-hidden="true" />Change Password </Link></li>
             </ul>
-            <span className="heading">Extras</span>
+            {/* <span className="heading">Extras</span>
             <ul className="list-unstyled">
                 <li> <Link to="/about"> <i className="icon-screen" />Abount </Link></li>
                 <li> <Link to="/help"> <i className="icon-flask" />Help </Link></li>
-            </ul>
+            </ul> */}
         </nav>
     );
 }
