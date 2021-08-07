@@ -69,7 +69,25 @@ function Login(props) {
                 'error'
             );
         }
-        // alert('Login failed');
+        if (err) {
+            // alert('Username not found');
+            Swal.fire(
+                'Username or password incorrect!',
+                'Please try again.',
+                'error'
+            );
+            history.replace('/');
+        }
+        
+        // // alert('Login failed');
+        // if (err.message === 'Unauthorized') {
+        //     // alert('Username not found');
+        //     Swal.fire(
+        //         'Username not found!',
+        //         'Please try again.',
+        //         'error'
+        //     );
+        // }
     }
 
     const passwordToggle = () => {

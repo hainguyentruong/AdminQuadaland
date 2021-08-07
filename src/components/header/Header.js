@@ -43,8 +43,9 @@ function Header(props) {
           <div className="navbar-holder d-flex align-items-center justify-content-between">
             {/* Navbar Header*/}
             <div className="navbar-header">
-              {/* Navbar Brand */}<Link to="/" className="navbar-brand d-none d-sm-inline-block">
-                <div className="brand-text d-none d-lg-inline-block"><strong>admin quadaland</strong></div></Link>
+              {/* Navbar Brand */}
+              <Link to="/home" className="navbar-brand d-none d-sm-inline-block">
+                <div className="brand-text d-none d-lg-inline-block"><string>admin quadaland</string></div></Link>
             </div>
             {/* Navbar Menu */}
             <ul className="nav-menu list-unstyled d-flex flex-md-row align-items-md-center">

@@ -26,7 +26,7 @@ axiosadmin.interceptors.response.use((response) => {
     if (error.response && error.response.data && error.response.data.message == 'Unauthorized') {
         localStorage.removeItem('token');
         delete axiosadmin.defaults.headers.common["Authorization"];
-        window.location.href = "/login";
+        window.location.href = "/";
     }
     // throw error.response.data.message;
     throw error.message
