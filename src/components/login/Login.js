@@ -10,8 +10,9 @@ function Login(props) {
 
     useEffect(() => {
         if (localStorage.getItem('token')) {
-            history.replace('/');
+            return history.push('/home');
         }
+        return history.push('/')
     }, [])
 
 
@@ -49,7 +50,10 @@ function Login(props) {
             const token = response.access_token
             axiosadmin.defaults.headers.common['Authorization'] = `Bearer ${token}`
             localStorage.setItem('token', token);
+            localStorage.setItem('username', username);
+            localStorage.setItem('role', response.role);
             history.replace('/home');
+            
         } else {
             Swal.fire(
                 'Error!',

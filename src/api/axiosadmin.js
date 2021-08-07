@@ -23,9 +23,9 @@ axiosadmin.interceptors.response.use((response) => {
     return response;
 }, (error) => {
     // Handle errors
-    if (error.response && error.response.data && error.response.data.message == 'Unauthorized') {
+    if (error.response.status === 401) {
         localStorage.removeItem('token');
-        delete axiosadmin.defaults.headers.common["Authorization"];
+        axiosadmin.defaults.headers.common["Authorization"] = "";
         window.location.href = "/";
     }
     // throw error.response.data.message;

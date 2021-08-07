@@ -1,7 +1,8 @@
 import React from 'react';
 import DashBoard from '../components/dashboard/DashBoard';
 import SideBar from '../components/sideBar/SideBar';
-import Header from '../components/header/Header'
+import Header from '../components/header/Header';
+
 function HomePage(props) {
     return (
         <>

@@ -1,11 +1,19 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import jwt_decode from "jwt-decode";
 import axiosadmin from '../../api/axiosadmin';
 function SideBar(props) {
-    const token = localStorage.getItem('token');
-    const currentRole = jwt_decode(token).role;
-    const currentName = jwt_decode(token).username;
+    const [currentName, setCurrentName] = useState("")
+    const [currentRole, setCurrentRole] = useState("")
+    const [token, setToken] = useState("")
+
+    useEffect(() => {
+        setCurrentName(localStorage.getItem('username'))
+        setCurrentRole(localStorage.getItem('role'))
+        setToken(localStorage.getItem('token'))
+        return () => {
+        }
+    }, [])
     // const currentRole = token.role;
     // const currentName = token.username;
     return (
