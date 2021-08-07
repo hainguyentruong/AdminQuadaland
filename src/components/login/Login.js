@@ -76,7 +76,6 @@ function Login(props) {
                 'Please try again.',
                 'error'
             );
-            history.replace('/');
         }
         
         // // alert('Login failed');
