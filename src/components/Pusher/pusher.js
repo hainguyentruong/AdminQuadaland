@@ -40,7 +40,7 @@ function createPusher() {
       });
     });
 
-    channels["private-moderators"].bind("user-created", (data) => {
+    channels["private-moderators"].bind("user-signed-up", (data) => {
       Swal.fire({
         title: "New User?",
         text: "Active for new user!",
