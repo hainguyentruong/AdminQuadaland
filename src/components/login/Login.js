@@ -5,17 +5,9 @@ import withReactContent from 'sweetalert2-react-content';
 
 import authApi from '../../api/authApi';
 import axiosadmin from '../../api/axiosadmin';
+import createPusher from '../Pusher/pusher';
 
 function Login(props) {
-
-    useEffect(() => {
-        if (localStorage.getItem('token')) {
-            return history.push('/home');
-        }
-        return history.push('/')
-    }, [])
-
-
     const MySwal = withReactContent(Swal)
 
     const history = useHistory();
@@ -53,9 +45,9 @@ function Login(props) {
             localStorage.setItem('username', username);
             localStorage.setItem('role', response.role);
             history.replace('/home');
-            
+            createPusher()
         } else {
-            Swal.fire(
+            const swal = new Swal.fire(
                 'Error!',
                 `Cannot login with ${role} role`,
                 'error'
