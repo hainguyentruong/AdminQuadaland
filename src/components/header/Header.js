@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useHistory, Link } from 'react-router-dom';
-
+import {getPusher} from '../Pusher/pusher';
 import authApi from "../../api/authApi";
 import axiosadmin from '../../api/axiosadmin';
 
@@ -11,6 +11,7 @@ function Header(props) {
 
   const logOut = () => {
     authApi.logOut(logOutSuccess);
+    getPusher() && getPusher().disconnect();
   }
 
   const logOutSuccess = () => {

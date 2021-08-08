@@ -82,9 +82,7 @@ const AddProperty = () => {
 
     const addPropertyError = (err) => {
         Swal.fire(
-            'Error!',
-            err[0],
-            'error'
+            'Cannot add property!'
         );
     }
 
@@ -217,8 +215,8 @@ const AddProperty = () => {
                                                 <div className="line" />
                                                 <div className="form-group row">
                                                     <div className="col-sm-4 offset-sm-3">
-                                                        <button type="reset" className="btn btn-secondary" style={{ marginRight: 2 }}>Cancel</button>
-                                                        <button type="submit" className="btn btn-primary" onClick={addProperty}>Save changes</button>
+                                                        {/* <button type="reset" className="btn btn-secondary" style={{ marginRight: 2 }}>Cancel</button> */}
+                                                        <button type="submit" className="btn btn-primary" style={{ marginLeft: 250  }} onClick={addProperty}>Save changes</button>
                                                     </div>
                                                 </div>
                                             </form>

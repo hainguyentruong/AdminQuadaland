@@ -44,6 +44,7 @@ export default function ActionUser() {
         //history.goBack();
     }
 
+
     const addUserSuccess = () => {
         Swal.fire(
             'Success!',
@@ -55,9 +56,7 @@ export default function ActionUser() {
 
     const addUserError = (err) => {
         Swal.fire(
-            'Error!',
-            err[0],
-            'error'
+            'Cannot add user!'
         );
     }
 
@@ -136,8 +135,8 @@ export default function ActionUser() {
                                                 <div className="line" />
                                                 <div className="form-group row">
                                                     <div className="col-sm-4 offset-sm-3">
-                                                        <button type="reset" className="btn btn-secondary" style={{ marginRight: 2 }}>Cancel</button>
-                                                        <button type="submit" className="btn btn-primary" onClick={addUser}>Save changes</button>
+                                                        {/* <button type="reset" className="btn btn-secondary" style={{ marginRight: 2 }}>Cancel</button> */}
+                                                        <button type="submit" className="btn btn-primary" style={{ marginLeft: 250  }} onClick={addUser}>Save changes</button>
                                                     </div>
                                                 </div>
                                             </form>

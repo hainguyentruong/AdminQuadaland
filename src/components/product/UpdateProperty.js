@@ -65,9 +65,7 @@ const UpdateProperty = () => {
 
     const updatePropertyError = (err) => {
         Swal.fire(
-            'Error!',
-            err[0],
-            'error'
+            'Cannot update property!'
         );
     }
 

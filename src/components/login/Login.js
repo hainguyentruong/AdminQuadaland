@@ -5,7 +5,7 @@ import withReactContent from 'sweetalert2-react-content';
 
 import authApi from '../../api/authApi';
 import axiosadmin from '../../api/axiosadmin';
-import createPusher from '../Pusher/pusher';
+import {createPusher} from '../Pusher/pusher';
 
 function Login(props) {
     const MySwal = withReactContent(Swal)

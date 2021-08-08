@@ -25,7 +25,7 @@ import PropertySaleMethods from './components/PropertySaleMethods/PropertySaleMe
 import MediaTable from "./components/media";
 import { useEffect } from 'react';
 import Page404 from './components/404/404';
-import createPusher from './components/Pusher/pusher';
+import {createPusher} from './components/Pusher/pusher';
 
 
 function App() {
