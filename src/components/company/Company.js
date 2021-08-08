@@ -25,7 +25,7 @@ function Company(props) {
             per_page,
             sort_by: `-created_at`
         }
-        companyapi.getAll().then(res => {
+        companyapi.getAll(params).then(res => {
             setCompanies(res.result)
             setTotal(res.count);
             setLast_page(res.last_page);
