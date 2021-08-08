@@ -12,7 +12,7 @@ function getPusher (){
 function createPusher() {
   pusher = new Pusher("31228d6611e35745a3c9", {
     cluster: "ap1",
-    authEndpoint: "http://123.19.51.38:2999/api/v1/pusher/auth",
+    authEndpoint: "http://123.19.51.38:3000/api/v1/pusher/auth",
     auth: {
       headers: {
         Authorization: "Bearer " + localStorage.getItem("token"),
