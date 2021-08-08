@@ -115,7 +115,13 @@ const MediaTable = () => {
     }
 
     const uploadImageSuccess = () => {
+        Swal.fire(
+            'Upload Media!',
+            'Media has been uploaded.',
+            'success'
+        );
         getData();
+
     }
 
     return (
