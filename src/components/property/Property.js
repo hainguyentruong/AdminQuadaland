@@ -35,6 +35,7 @@ const Property = (props) => {
         const params = {
             page,
             per_page,
+            sort_by: `-created_at`
         }
         const response = await propertyapi.getAll(params);
         console.log(response);
