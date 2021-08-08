@@ -89,7 +89,8 @@ function User(props) {
         const params = {
             page,
             per_page,
-            search
+            search,
+            sort_by: `-created_at`
         }
         const response = await userapi.getAll(params)
         // console.log(response);

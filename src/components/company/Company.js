@@ -22,7 +22,8 @@ function Company(props) {
     useEffect(() => {
         const params = {
             page,
-            per_page
+            per_page,
+            sort_by: `-created_at`
         }
         companyapi.getAll().then(res => {
             setCompanies(res.result)

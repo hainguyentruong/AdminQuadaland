@@ -30,6 +30,7 @@ const MediaTable = () => {
         const params = {
             page,
             per_page,
+            sort_by: `-created_at`
         }
         const response = await mediaapi.getAll(params);
         // console.log(response);

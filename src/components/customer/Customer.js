@@ -19,7 +19,8 @@ function Customer(props) {
     useEffect(() => {
         const params = {
             page,
-            per_page
+            per_page,
+            sort_by: `-created_at`
         }
         customerapi.getAll(params).then(res => {
             setCustomers(res.result)
