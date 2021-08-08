@@ -47,6 +47,7 @@ function Login(props) {
             history.replace('/home');
             createPusher()
         } else {
+            console.log('alo')
             const swal = new Swal.fire(
                 'Error!',
                 `Cannot login with ${role} role`,

@@ -26,7 +26,10 @@ axiosadmin.interceptors.response.use((response) => {
     if (error.response.status === 401) {
         localStorage.removeItem('token');
         axiosadmin.defaults.headers.common["Authorization"] = "";
-        window.location.href = "/";
+        
+        if (error.response.config.url !== 'auth/sign-in') {
+            window.location.href = "/";
+        }
     }
     // throw error.response.data.message;
     throw error.message

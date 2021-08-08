@@ -48,7 +48,7 @@ function App() {
             return !localStorage.token ? <Login></Login> : <Redirect to="/home"></Redirect>
           }}>
           </Route>
-        <Route path="/property" render ={() => {
+        <Route exact path="/property" render ={() => {
             return localStorage.token ? <Property></Property> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
@@ -60,15 +60,15 @@ function App() {
             return localStorage.token ? <Company></Company> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-        <Route path="/companies/add" render ={() => {
+        <Route exact path="/companies/add" render ={() => {
             return localStorage.token ? <AddCompany></AddCompany> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-        <Route path="/customer" render ={() => {
+        <Route exact path="/customer" render ={() => {
             return localStorage.token ? <Customer></Customer> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-        <Route path="/customers/add" render ={() => {
+        <Route exact path="/customers/add" render ={() => {
             return localStorage.token ? <AddCustomer></AddCustomer> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
@@ -80,14 +80,15 @@ function App() {
             return localStorage.token ? <PropertySaleMethods></PropertySaleMethods> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-        <Route path="/users" render ={() => {
+        <Route exact path="/users" render ={() => {
             return localStorage.token ? <User></User> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-        <Route path="/users/add" render ={() => {
+        <Route exact path="/users/add" render ={() => {
             return localStorage.token ? <ActionUser></ActionUser> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
+        {/* <Route exact path="/users/add" component={ActionUser}></Route> */}
         <Route path="/users/edit/:username" render ={() => {
             return localStorage.token ? <UpdateUser></UpdateUser> : <Redirect to="/login"></Redirect>
           }}>
