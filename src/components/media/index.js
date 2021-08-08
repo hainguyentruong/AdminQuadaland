@@ -111,7 +111,7 @@ const MediaTable = () => {
             // console.log(i.name);
             formData.append('files', i)
         }
-        mediaapi.addMedia(formData, uploadImageSuccess)
+        mediaapi.addMedia(formData, uploadImageSuccess, uploadImageError)
     }
 
     const uploadImageSuccess = () => {
@@ -123,6 +123,15 @@ const MediaTable = () => {
         getData();
 
     }
+
+    const uploadImageError =() =>{
+        Swal.fire(
+            'Error!',
+            'Media hasn\'t been uploaded.',
+            'error'
+        );
+    }
+
 
     return (
         <>
