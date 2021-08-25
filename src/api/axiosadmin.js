@@ -23,7 +23,7 @@ axiosadmin.interceptors.response.use((response) => {
     return response;
 }, (error) => {
     // Handle errors
-    if (error.response.status === '401') {
+    if (error.response && error.response.data && error.response.data.message == 'Unauthorized') {
         localStorage.removeItem('token');
         axiosadmin.defaults.headers.common["Authorization"] = "";
         

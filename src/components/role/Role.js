@@ -26,7 +26,7 @@ function Role(props) {
     return (
         <>
             <Header />
-            <div className="page-content d-flex align-items-stretch">
+            <div className="page-content d-flex align-items-stretch" >
                 <SideBar />
                 <div className="content-inner">
                     {/* Page Header*/}

@@ -10,7 +10,7 @@ function getPusher (){
   return pusher;
 }
 function createPusher() {
-  pusher = new Pusher("31228d6611e35745a3c9", {
+  pusher = new Pusher("05c1e4f1c04cc959653a", {
     cluster: "ap1",
     authEndpoint: "http://123.19.51.38:3000/api/v1/pusher/auth",
     auth: {

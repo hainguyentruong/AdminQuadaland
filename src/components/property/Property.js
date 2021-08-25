@@ -135,7 +135,7 @@ const Property = (props) => {
     return (
         <>
             <Header />
-            <div className="page-content d-flex align-items-stretch">
+            <div className="page-content d-flex align-items-stretch" style={{overflowX: 'hiden', overflowY: 'auto'}}>
                 <SideBar />
                 <div className="content-inner">
                     {/* Page Header*/}

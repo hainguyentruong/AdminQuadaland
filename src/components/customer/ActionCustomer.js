@@ -59,7 +59,7 @@ function ActionCustomer(props) {
                                             </div>
                                         </div>
                                         <div>
-                                            <div className="line" />
+                                            <div className="line" />    
                                             <div className="form-group row">
                                                 <label className="col-sm-3 form-control-label">Password</label>
                                                 <div className="col-sm-9">

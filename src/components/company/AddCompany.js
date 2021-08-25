@@ -59,7 +59,7 @@ const AddCompany = () => {
     return (
         <>
             <Header />
-            <div className="page-content d-flex align-items-stretch">
+            <div className="page-content d-flex align-items-stretch" style={{overflowX: 'hiden', overflowY: 'auto'}}>
                 <SideBar />
                 <div className="content-inner">
                     {/* Page Header*/}
@@ -110,7 +110,6 @@ const AddCompany = () => {
                                                         <input onChange={setValue} type="text" name="phone" className="form-control" />
                                                     </div>
                                                 </div>
-
                                                 <div className="line" />
                                                 <div className="form-group row">
                                                     <label className="col-sm-3 form-control-label">Address</label>

@@ -121,7 +121,7 @@ function User(props) {
     return (
         <>
             <Header />
-            <div className="page-content d-flex align-items-stretch">
+            <div className="d-flex p-2 col-example" style={{overflowX: 'hiden', overflowY: 'auto'}}>
                 <SideBar />
                 <div className="content-inner">
                     {/* Page Header*/}
@@ -230,6 +230,7 @@ function User(props) {
                     {/* Page Footer*/}
                     <MyFooter></MyFooter>
                 </div>
+                <p className="line-height:30px;font-size:18px;"></p>
             </div>
         </>
     );

@@ -30,15 +30,15 @@ function SideBar(props) {
             <span className="heading">Main</span>
             {/* {(nameRole === 'superadmin' || nameRole === 'admin') ? */}
             <ul className="list-unstyled">
-                <li><Link to="/home"> <i class="fa fa-home" aria-hidden="true"/>Home </Link></li>
-                <li><Link to="/property"> <i className="icon icon-website" />Property</Link></li>
-                <li> <Link to="/media"> <i class="fa fa-camera" aria-hidden="true" />Media </Link></li>
-                <li><Link to="/customer"> <i class="fa fa-users" aria-hidden="true" />Customer</Link></li>
-                <li><Link to="/company"> <i class="fa fa-building" aria-hidden="true" />Company</Link></li>
-                <li><Link to="/users"> <i class="fa fa-user" aria-hidden="true" />Users</Link></li>
-                <li><Link to="/roles"> <i class="fa fa-server" aria-hidden="true" />Roles</Link></li>
-                <li><Link to="/propertysalemethods"> <i class="fa fa-bars" aria-hidden="true" />Sale Method</Link></li>
-                <li> <Link to="/change-password"> <i class="fa fa-cog" aria-hidden="true" />Change Password </Link></li>
+                <li><Link to="/home"> <i class="fa fa-home" aria-hidden="true" style={{color: '#800000'}}/>Home </Link></li>
+                <li><Link to="/property"> <i className="icon icon-website" style={{color: '#800000'}}/>Property</Link></li>
+                <li> <Link to="/media"> <i class="fa fa-camera" aria-hidden="true" style={{color: '#800000'}}/>Media </Link></li>
+                <li><Link to="/customer"> <i class="fa fa-users" aria-hidden="true" style={{color: '#800000'}}/>Customer</Link></li>
+                <li><Link to="/company"> <i class="fa fa-building" aria-hidden="true" style={{color: '#800000'}}/>Company</Link></li>
+                <li><Link to="/users"> <i class="fa fa-user" aria-hidden="true" style={{color: '#800000'}}/>Users</Link></li>
+                <li><Link to="/roles"> <i class="fa fa-server" aria-hidden="true" style={{color: '#800000'}}/>Roles</Link></li>
+                <li><Link to="/propertysalemethods"> <i class="fa fa-bars" aria-hidden="true" style={{color: '#800000'}}/>Sale Method</Link></li>
+                <li> <Link to="/change-password"> <i class="fa fa-cog" aria-hidden="true" style={{color: '#800000'}}/>Change Password </Link></li>
             </ul>
             {/* <span className="heading">Extras</span>
             <ul className="list-unstyled">
