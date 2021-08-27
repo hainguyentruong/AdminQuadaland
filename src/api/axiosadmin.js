@@ -28,7 +28,7 @@ axiosadmin.interceptors.response.use((response) => {
         axiosadmin.defaults.headers.common["Authorization"] = "";
         
         if (error.response.config.url !== 'auth/sign-in') {
-            window.location.href = "/";
+            window.location.href = "/login";
         }
     }
     // throw error.response.data.message;
