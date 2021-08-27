@@ -70,7 +70,7 @@ const DashBoard =() => {
               <div className="col-xl-3 col-sm-6">
                 <div className="item d-flex align-items-center">
                   <div className="icon bg-violet"><i className="icon-user" /></div>
-                  <div className="title"><span>User<br /></span>
+                  <div className="title"><span>Users<br /></span>
                     <div className="progress">
                       <div role="progressbar" style={{ width: '100%', height: '4px' }} className="progress-bar bg-violet fix-processbar" />
                     </div>
@@ -82,7 +82,7 @@ const DashBoard =() => {
               <div className="col-xl-3 col-sm-6">
                 <div className="item d-flex align-items-center">
                   <div className="icon bg-red"><i className="icon-padnote" /></div>
-                  <div className="title"><span>Company<br /></span>
+                  <div className="title"><span>Companies<br /></span>
                     <div className="progress">
                       <div role="progressbar" style={{ width: '100%', height: '4px' }} className="progress-bar bg-red fix-processbar" />
                     </div>
@@ -94,7 +94,7 @@ const DashBoard =() => {
               <div className="col-xl-3 col-sm-6">
                 <div className="item d-flex align-items-center">
                   <div className="icon bg-green"><i className="icon-bill" /></div>
-                  <div className="title"><span>Customer<br /></span>
+                  <div className="title"><span>Customers<br /></span>
                     <div className="progress">
                       <div role="progressbar" style={{ width: '100%', height: '4px' }} className="progress-bar bg-green fix-processbar" />
                     </div>
@@ -106,7 +106,7 @@ const DashBoard =() => {
               <div className="col-xl-3 col-sm-6">
                 <div className="item d-flex align-items-center">
                   <div className="icon bg-orange"><i className="icon-check" /></div>
-                  <div className="title"><span>Property<br /></span>
+                  <div className="title"><span>Properties<br /></span>
                     <div className="progress">
                       <div role="progressbar" style={{ width: '100%', height: '4px' }} className="progress-bar bg-orange fix-processbar" />
                     </div>
