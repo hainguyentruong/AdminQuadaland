@@ -95,11 +95,11 @@ const UpdateCompany = () => {
                                                     <div className="form-group row">
                                                         <label className="col-sm-3 form-control-label">Name</label>
                                                         <div className="col-sm-9">
-                                                            <input type="text" name="username" value={user.user} className="form-control" disabled />
+                                                            <input type="text" name="username" value={user?.user?.username} className="form-control" disabled />
                                                         </div>
                                                     </div>
                                                 </div>
-                                                <div className="line" />
+                                                <div className="line" />s
                                                 <div className="form-group row">
                                                     <label className="col-sm-3 form-control-label">Fullname</label>
                                                     <div className="col-sm-3">

@@ -11,7 +11,7 @@ function Company(props) {
 
     // const [companies, setCompanies] = useState([]);
     // const [searchText, setSearchText] = useState('');
-    const [customers, setCompanies] = useState([]);
+    const [companies, setCompanies] = useState([]);
     const [searchText, setSearchText] = useState('');
     const [total, setTotal] = useState(0);
     const [page, setPage] = useState(1);
@@ -30,7 +30,7 @@ function Company(props) {
             setTotal(res.count);
             setLast_page(res.last_page);
         }).catch(err => console.log(err))
-        //console.log(companies);
+        console.log(companies);
     }, [page, per_page])
 
     const changeItemPerPage = e => {
@@ -106,25 +106,25 @@ function Company(props) {
                                                         </tr>
                                                     </thead>
                                                     <tbody>
-                                                        {customers ?
-                                                            customers.map((item, index) => (
+                                                        {companies ?
+                                                            companies.map((item, index) => (
                                                                 <tr>
                                                                     <th scope="row">{(per_page * (page - 1)) + index + 1}</th>
-                                                                    <td>{item.user}</td>
+                                                                    <td>{item && item.user &&item.user.username}</td>
                                                                     <td>{item.full_name}</td>
                                                                     <td>{item.phone}</td>
                                                                     <td>{item.address}</td>
                                                                     <td>{item.email}</td>
                                                                     {/* <td>{item.facebook}</td>
-                                                            <td>{item.instagram}</td>
-                                                            <td>{item.twitter}</td> */}
-                                                                    <td>{item.created_at ? new Date(item.created_at).toDateString() : ''}</td>
+                                                                    <td>{item.instagram}</td>
+                                                                    <td>{item.twitter}</td> */}
+                                                                    <td>{item && item.user && item.user.created_at ? new Date(item.created_at).toDateString() : ''}</td>
                                                                     <td>{item.updated_at ? new Date(item.updated_at).toDateString() : ''}</td>
-                                                                    <td>{item.deleted_at ? new Date(item.deleted_at).toDateString() : ''}</td>
+                                                                    <td>{item && item.user && item.user.deleted_at ? new Date(item.deleted_at).toDateString() : ''}</td>
                                                                     <td style={{ textAlign: "center" }}>
                                                                         <div>
-                                                                            {!item.deleted_at ?
-                                                                                < span title='Edit' className="fix-action"><Link to={`/companies/edit/${item.user}`}> <i className="fa fa-edit"></i></Link></span> : ''}
+                                                                            {!(item && item.user && item.user.deleted_at)?
+                                                                                < span title='Edit' className="fix-action"><Link to={`/companies/edit/${item && item.user &&item.user.username}`}> <i className="fa fa-edit"></i></Link></span> : ''}
                                                                         </div>
                                                                     </td>
                                                                 </tr>

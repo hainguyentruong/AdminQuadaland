@@ -95,6 +95,7 @@ function User(props) {
         const response = await userapi.getAll(params)
         // console.log(response);
         setUsers(response.result)
+        console.log(response)
         setTotal(response.count);
         setLast_page(response.last_page);
     }

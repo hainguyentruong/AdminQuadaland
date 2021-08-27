@@ -5,16 +5,7 @@ import Header from '../components/header/Header';
 
 function HomePage(props) {
     return (
-        <>
-            <Header />
-            <div className="page-content d-flex align-items-stretch">
-                <SideBar />
-                <div>
-                    <DashBoard />
-                </div>
-            </div>
-        </>
-
+         <DashBoard />
     );
 }
 
