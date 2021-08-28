@@ -113,7 +113,7 @@ function App() {
             return localStorage.token ? <MediaTable></MediaTable> : <Redirect to="/login"></Redirect>
           }}>
           </Route>
-          <Route exact path="/" render ={() => {
+          <Route exact path="" render ={() => {
             return localStorage.token ? <Redirect to="/home"></Redirect> : <Redirect to="/login"></Redirect>
           }}>
             
